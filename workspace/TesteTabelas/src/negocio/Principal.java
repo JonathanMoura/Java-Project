@@ -52,6 +52,8 @@ public class Principal extends JFrame{
 				System.out.println("Erro durante cadastro!");
 		}
 		*/
+		sql = "DELETE from produto where id = 2";
+		sql = "";
 		sql = "Select * from produto";
 		ResultSet rs = con.executaBusca(sql);
 		try {

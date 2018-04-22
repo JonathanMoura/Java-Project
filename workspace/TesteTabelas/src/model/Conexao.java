@@ -48,5 +48,18 @@ public class Conexao {
 			return null;
 		}
 	}
+	public void delete(String sql){
+		try{
+			Statement stm = con.createStatement();
+			int res = stm.executeUpdate(sql);
+			if(res>0){
+				System.out.println("Sucesso!");
+			}else{
+				System.err.println("Erro!");
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
 
 }
